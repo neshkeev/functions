@@ -1,24 +1,14 @@
 <idea-plugin>
-    <id>org.example.functions</id>
-    <name>Convert method to functions</name>
+    <id>com.github.neshkeev.functions</id>
+    <name>Functions</name>
     <vendor email="kastolom@gmail.com" url="http://funcitons.github.io">neshkeev</vendor>
 
     <description><![CDATA[
-This plugin enables all the java.lang.functions.Function methods on a method.
+This plugin converts method references to functional objects (Function, BiFunction, Supplier, Consumer, etc)
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>com.intellij.modules.platform</depends>
-
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <completion.contributor language="JAVA" implementationClass="MethodReferenceCompletion"/>
     </extensions>
 
-    <actions>
-        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="Myplugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
-        </group>
-    </actions>
 </idea-plugin>
