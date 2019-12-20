@@ -7,6 +7,9 @@
 This plugin converts method references to functional objects (Function, BiFunction, Supplier, Consumer, etc)
     ]]></description>
 
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
     <extensions defaultExtensionNs="com.intellij">
         <completion.contributor language="JAVA" implementationClass="MethodReferenceCompletion"/>
     </extensions>
