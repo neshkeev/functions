@@ -11,7 +11,9 @@ This plugin converts method references to functional objects (Function, BiFuncti
     <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <completion.contributor language="JAVA" implementationClass="MethodReferenceCompletionContributor"/>
+<!--        <completion.contributor language="JAVA" implementationClass="MethodReferenceCompletionContributor"/>-->
+        <completion.contributor language="JAVA" implementationClass="TypeAliasCompletionContributor"/>
+        <lang.foldingBuilder language="JAVA" implementationClass="TypeAliasFoldingBuilder"/>
     </extensions>
 
 </idea-plugin>
