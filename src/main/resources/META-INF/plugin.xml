@@ -14,6 +14,7 @@ This plugin converts method references to functional objects (Function, BiFuncti
 <!--        <completion.contributor language="JAVA" implementationClass="MethodReferenceCompletionContributor"/>-->
         <completion.contributor language="JAVA" implementationClass="TypeAliasCompletionContributor"/>
         <lang.foldingBuilder language="JAVA" implementationClass="TypeAliasFoldingBuilder"/>
+        <multiHostInjector implementation="TypeAliasMultiHostInjector"/>
     </extensions>
 
 </idea-plugin>
